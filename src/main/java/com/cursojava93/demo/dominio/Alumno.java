@@ -1,4 +1,4 @@
-package com.cursojava93.dominio;
+package com.cursojava93.demo.dominio;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -7,9 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Alumno {
 
@@ -28,6 +30,6 @@ public class Alumno {
     private String apellido;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private Nota[] notas;
+    private List<Nota> notas = new ArrayList<Nota>();
     
 }

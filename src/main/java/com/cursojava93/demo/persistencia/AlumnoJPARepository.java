@@ -1,6 +1,6 @@
-package com.cursojava93.persistencia;
+package com.cursojava93.demo.persistencia;
 
-import com.cursojava93.dominio.Alumno;
+import com.cursojava93.demo.dominio.Alumno;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

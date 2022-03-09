@@ -1,0 +1,30 @@
+<form th:action="@{/form/create}" th:object="${alumno}" method="post">
+    <div class="errorblock" th:if="${#fields.hasErrors('*')}">
+        <ul>
+            <li th:each="err : ${#fields.errors('*')}"
+                th:text="${err}">Input is incorrect</li>
+        </ul>
+    </div>
+    <fieldset>
+        <legend th:text="#{form.user.legend_text}">Datos del usuario</legend>
+        <table>
+            <tr>
+                <td><label th:text="#{form.user.nombre}">Nombre: </label></td>
+                <td><input type="text" th:field="*{nombre}" /></td>
+            </tr>
+            <tr>
+                <td><label th:text="#{form.user.apellido}">Apellidos: </label></td>
+                <td><input type="text" th:field="*{apellidos}" /></td>
+            </tr>
+ <!--           <tr>
+                <td><label th:text="#{form.user.edad}">Edad: </label></td>
+                <td><input type="number" th:field="*{edad}" /></td>
+            </tr>-->
+            <tr>
+                <td>
+                    <button th:text="#{form.user.submit}" type="submit">Registrar...</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>

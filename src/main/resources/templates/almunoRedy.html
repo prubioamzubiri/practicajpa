@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav>
+    <ul>
+        <li><a href="/mvc">Volver</a></li>
+    </ul>
+</nav>
+<table>
+    <ul>
+        <li th:text="${alumno.nombre}" />
+        <li th:text="${alumno.apellidos}" />
+        <!--<li th:text="${alumno.edad}" />-->
+    </ul>
+</table>
+</body>
+</html>
